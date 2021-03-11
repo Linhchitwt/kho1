@@ -1,0 +1,29 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int tong(int k, int &sum){
+	int t;
+	sum = 0;
+	while (k != 0)
+	{t= k % 10;
+	sum += t;
+	k = k/10;
+	}
+	return sum;
+}
+int main (){
+	int n, k, sum, max, a;
+	cout << "nhap vao so chu so n = ";
+	cin >> n;
+	max = 0;
+	for (int i = 1; i <= n; i++) {
+		cout << "so thu " <<i << " la : ";
+		cin >> k;
+		cout << "So " << k <<" co tong cac chu so la = " << tong(k, sum)<< endl<<endl;
+		if (tong(k, sum) > max)
+		{max = tong(k, sum);
+		a = k;
+		}
+	}	cout << "So co  tong cac chu so lon nhat la "<< a<<" voi tong = "<< max;
+
+}
