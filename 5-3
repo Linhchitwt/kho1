@@ -1,0 +1,28 @@
+#include <iostream>
+#include <math.h>
+#include <conio.h>
+using namespace std;
+int main () {
+    int nx[12];
+    cout<<"Nhap vao nang suat cua 12 thang : "<<endl;
+    for (int thang=0; thang <= 11; thang ++)
+      {  cout <<"Nhap vao nang suat thang thu "<<thang+1<<" : ";
+        cin >> nx[thang];}
+          for (int thang=0; thang <= 11; thang ++) {
+        if (nx[thang] > 80 || nx[thang] <0)
+        {
+            cout<<"Nhap sai nang xuat thang thu "<< thang+1<<", xin moi nhap lai : ";
+            cin>> nx[thang];
+        }
+    }
+    cout << "Bieu do theo hang ngang la :"<<endl;
+      for (int thang=0; thang <= 11; thang ++){
+         cout <<"thang "<<thang +1<<" : ";; 
+      
+        for (int i = 1; i <= nx[thang]; i++)
+        {
+            cout <<"*";
+        }
+        cout<<endl;
+    }
+}
