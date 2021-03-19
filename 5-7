@@ -7,7 +7,7 @@ int main(){
     float arr[40][40], a[40][40];
     cout <<"Nhap vao so hang, so cot cua mang : ";
     cin >>m>>n;
-    if (m>20 && n >35){
+    if (m>20 || n >35){
         cout <<"Nhap qua gioi han, xin moi nhap lai : ";
         cin >>m>>n;
     }
