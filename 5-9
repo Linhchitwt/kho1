@@ -1,0 +1,28 @@
+#include <iostream>
+#include <math.h>
+#include <conio.h>
+using namespace std;
+int Min(float arr[], int n, int &t){
+    int min;
+    min = 0;
+    for (int i = 0; i <n; i++){
+        if (arr[i] <= arr[min]){
+            t = i;
+        }
+    }
+    return arr[min];
+}
+int main () {
+    int n,t;
+    cout <<"Nhap vao so phan tu cua mang : ";
+    cin >>n;
+    float arr[n];
+    cout <<"Nhap vao cac phan tu cua mang :"<<endl;
+      for (int i = 0; i <n; i++){
+          cout <<"Phan tu thu "<<i+1<<" la :";
+          cin>>arr[i];
+}
+Min(arr, n,t);
+cout <<"Phan tu be nhat trong day la : "<<Min(arr, n,t) <<endl;
+cout<<"O vi tri : ";
+cout<< t<<" ";}
