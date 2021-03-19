@@ -1,0 +1,43 @@
+#include <iostream>
+#include <math.h>
+#include <conio.h>
+using namespace std;
+int main(){
+    int m,n;
+    float arr[40][40], a[40][40];
+    cout <<"Nhap vao so hang, so cot cua mang : ";
+    cin >>m>>n;
+    if (m>20 && n >35){
+        cout <<"Nhap qua gioi han, xin moi nhap lai : ";
+        cin >>m>>n;
+    }
+     cout <<"Nhap vao cac phan tu cua mang :"<<endl;
+    for (int i = 0; i< m; i++)
+    {
+        for (int j = 0; j < n; j++)
+    {
+        cout <<"Phan tu thu "<<i<<","<< j<<" la : ";
+        cin>>arr[i][j];}}
+    cout <<"Mang duoc nhap vao la :"<<endl;
+    for (int i = 0; i< m; i++)
+    {
+        for (int j = 0; j < n; j++)
+    {  cout <<arr[i][j]<<" ";
+    }cout <<endl;}
+    cout<<endl<< "Ung voi mang S la :"<<endl;
+     for (int i = 0; i< m; i++)
+    {
+        for (int j = 0; j < n; j++)
+    {
+        if (arr[i][j] >0) {
+            a[i][j] = 1;
+        }
+        if (arr[i][j] == 0){
+            a[i][j] = 0;
+        }
+        if (arr[i][j] < 0){
+            a[i][j] = -1;
+        }
+     cout<<a[i][j]<<" ";
+}cout <<endl;
+}}
