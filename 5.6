@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+#include <conio.h>
+using namespace std;
+int main (){
+    int N;
+    cout <<"Nhap vao so phan tu cua mang : ";
+    cin >>N;
+    float arr[N+10],k;
+    cout <<"Nhap vao cac phan tu cua mang :"<<endl;
+    for (int i = 0; i< N; i++)
+    {
+        cout <<"Phan tu thu "<<i+1<<" la : ";
+        cin>>arr[i];
+        cout<<endl;
+    }
+     cout<<"Mang duoc sap xep lai la: ";
+    for (int i = 0; i< N/2; i++)
+    {
+        k = arr[i];
+        arr[i] = arr[N-i-1];
+        arr[N-i-1] = k; }
+         for (int i = 0; i< N; i++){
+         cout<<arr[i]<<" ";
+     }
+}
