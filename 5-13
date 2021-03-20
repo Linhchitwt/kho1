@@ -1,0 +1,64 @@
+#include <iostream>
+#include <math.h>
+#include <conio.h>
+using namespace std;
+//tao ham sap xep mot mang
+void b(int arr[], int n){
+    int tg;
+    for (int i = 0; i< n; i++)
+    {
+        for (int j = i+1; j <n; j ++)
+        {
+            if (arr[i] > arr[j]){
+                tg=arr[i];
+                arr[i]= arr[j];
+                arr[j]=tg;
+            }
+        }
+    }
+}
+//chen 1 so vao day da duoc sap xep
+void c(int arr[], int &n){
+    int k,h;
+    cout<<endl<<"Nhap so k chen vao : ";
+    cin>>k;
+   h=0;
+   //h la vi tri can chen
+   while (arr[h]<k && (h <n) ){
+       h++;
+       // tai vi tri h neu arr be hon k thi h = h+1
+   }
+     for (int i =n; i>h; i--){
+         // lui so ra sau 1 don vi
+         arr[i]= arr[i-1];
+         // den vi tri h thi chen k vao
+         arr[h]=k;
+         //tang n len 1
+         n++;
+     }
+}
+int main (){
+    int n;
+    cout <<"Nhap vao so phan tu cua mang n = ";
+    cin>>n;
+    int arr[n+10];
+      for (int i = 0; i< n; i++){
+          cout <<"Phan tu thu "<<i+1<<" la: ";
+          cin>>arr[i];
+      }
+      cout <<"Day da nhap vao la :"<<endl;
+        for (int i = 0; i< n; i++){
+            cout<<arr[i]<<" ";
+        }
+        cout<<endl<<"Xep lai thanh day tang la :"<<endl;
+        b(arr,n);
+          for (int i = 0; i< n; i++){
+              cout <<arr[i]<<" ";
+          }  
+        c(arr,n);
+        cout<<"Day sau khi da chen la :"<<endl;   
+          for (int i = 0; i< n; i++)
+          {
+              cout <<arr[i]<<" ";
+          }
+}
