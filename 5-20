@@ -1,0 +1,34 @@
+#include <iostream>
+#include <math.h>
+#include <conio.h>
+using namespace std;
+int tohop(int k, int n) {
+    int m= 1;
+    int h=1;
+    int l=1;
+    int kq;
+    for (int i = 1; i<= k; i++){
+        m *= i;
+    }
+    for (int j =1; j<= (n-k); j++){
+        h*= j;
+    }
+    for (int a = 1; a<= n; a++){
+        l *= a;
+    }
+    return l/(h*m);
+}
+int main(){
+    int n;
+    cout <<" Nhap vao n = ";
+    cin >> n;
+    cout <<"Cac to hop cua n la :"<<endl;
+    for (int k = 0 ; k <= n; k++){
+        if (k == 0 || k == n)
+        {
+            cout << " To hop chap "<<k<<" cua "<<n<<" la : 1"<<endl;
+        }
+        else {
+        cout << " To hop chap "<<k<<" cua "<<n<<" la : "<<tohop(k,n)<<endl;}
+    }
+}
