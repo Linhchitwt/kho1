@@ -59,21 +59,3 @@ int main(){
         }
     }
 }
-
-
-//////////////////////////////////////////////////
-/*     bool done[100];
-    for (int i = 0; i < 100; i++)
-    {
-        done[i] = 0;
-    }
-    for (i = 0; i < n; i++)
-    {
-        if (!done[arr[i]] && (b[arr[i]] > 0))
-        {
-            done[arr[i]] = 1;
-            //sap xep lai
-            printf("%d - %d; ", arr[i], b[arr[i]]);
-        }
-    }
-} */
